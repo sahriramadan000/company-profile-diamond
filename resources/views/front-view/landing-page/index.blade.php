@@ -108,66 +108,17 @@
                         <tr>
                             <td colspan="3" class="fw-bold text-start">Emas Batangan</td>
                         </tr>
-                        <tr>
-                            <td>0.5 gr</td>
-                            <td>1,016,500</td>
-                            <td>1,019,041</td>
-                        </tr>
-                        <tr>
-                            <td>1 gr</td>
-                            <td>1,933,000</td>
-                            <td>1,937,833</td>
-                        </tr>
-                        <tr>
-                            <td>2 gr</td>
-                            <td>3,806,000</td>
-                            <td>3,815,515</td>
-                        </tr>
-                        <tr>
-                            <td>3 gr</td>
-                            <td>5,684,000</td>
-                            <td>5,698,210</td>
-                        </tr>
-                        <tr>
-                            <td>5 gr</td>
-                            <td>9,440,000</td>
-                            <td>9,463,600</td>
-                        </tr>
-                        <tr>
-                            <td>10 gr</td>
-                            <td>18,825,000</td>
-                            <td>18,872,063</td>
-                        </tr>
-                        <tr>
-                            <td>25 gr</td>
-                            <td>46,937,000</td>
-                            <td>47,054,343</td>
-                        </tr>
-                        <tr>
-                            <td>50 gr</td>
-                            <td>93,795,000</td>
-                            <td>94,029,488</td>
-                        </tr>
-                        <tr>
-                            <td>100 gr</td>
-                            <td>187,512,000</td>
-                            <td>187,980,780</td>
-                        </tr>
-                        <tr>
-                            <td>250 gr</td>
-                            <td>468,515,000</td>
-                            <td>469,686,288</td>
-                        </tr>
-                        <tr>
-                            <td>500 gr</td>
-                            <td>936,820,000</td>
-                            <td>939,162,050</td>
-                        </tr>
-                        <tr>
-                            <td>1000 gr</td>
-                            <td>1,873,600,000</td>
-                            <td>1,878,284,000</td>
-                        </tr>
+                        @forelse ($goldPrices as $item)
+                            <tr>
+                                <td>{{ $item->weight }} gr</td>
+                                <td>{{ number_format($item->base_price, 0, '.', '.') }}</td>
+                                <td>{{ number_format($item->price_pph, 0, '.', '.') }}</td>
+                            </tr>
+                        @empty
+                            <tr>
+                                <td colspan="3" class="text-center text-muted">Data tidak tersedia</td>
+                            </tr>
+                        @endforelse
                     </tbody>
                 </table>
             </div>
@@ -185,7 +136,7 @@
             </div>
 
             <div class="text-center mt-3">
-                <a href="https://wa.me/6281234567890" target="_blank"
+                <a href="https://wa.me/{{ $setting->no_wa ?? '0' }}" target="_blank"
                     class="btn btn-success btn-lg d-inline-flex align-items-center px-4 py-2 rounded-pill shadow">
                     <i class="bi bi-whatsapp me-2 fs-4"></i> Hubungi via WhatsApp
                 </a>
@@ -411,7 +362,7 @@
                                 murni. Dengan harga transparan, kualitas terjamin, dan pelayanan profesional, kami menjadi
                                 mitra terpercaya untuk menjaga sekaligus menumbuhkan nilai aset Anda.
                             </p>
-                            <a href="https://wa.me/6281234567890?text=Halo%2C%20saya%20ingin%20tahu%20lebih%20lanjut%20tentang%20layanan%20DIAMOND"
+                            <a href="https://wa.me/{{ $setting->no_wa ?? '0' }}?text=Halo%2C%20saya%20ingin%20tahu%20lebih%20lanjut%20tentang%20layanan%20DIAMOND"
                                 class="service-btn" target="_blank">
                                 Hubungi via WhatsApp
                                 <i class="bi bi-whatsapp"></i>
@@ -556,7 +507,7 @@
                     </div>
 
                     <div class="cta-buttons d-flex flex-wrap gap-3">
-                        <a href="https://wa.me/6281234567890?text=Halo%2C%20saya%20ingin%20tahu%20lebih%20lanjut%20tentang%20emas%20DIAMOND"
+                        <a href="https://wa.me/{{ $setting->no_wa ?? '0' }}?text=Halo%2C%20saya%20ingin%20tahu%20lebih%20lanjut%20tentang%20emas%20DIAMOND"
                             class="btn btn-primary" target="_blank">
                             Hubungi via WhatsApp
                         </a>
@@ -1102,10 +1053,7 @@
                         </div>
                         <div class="info-content">
                             <h4>Our Address</h4>
-                            <p>Outlet Mall Tamini Square</p>
-                            <p>Lantai GF Block GS 01 nomor 10</p>
-                            <p>Jl. Taman Mini I, RT.3/RW.2, Pinang Ranti,<br> Kec. Makasar, Kota Jakarta Timur, DKI Jakarta
-                                13560</p>
+                            <p>{{ $setting->address ?? '' }}</p>
                         </div>
                     </div>
                 </div>
@@ -1117,7 +1065,16 @@
                         </div>
                         <div class="info-content">
                             <h4>Whatsapp</h4>
-                            <p><a href="https://wa.me/6285217117114" target="_blank">0852 171 171 14</a></p>
+                            @php
+                                function formatPhone($number)
+                                {
+                                    $number = preg_replace('/\D/', '', $number);
+                                    return preg_replace('/(\d{4})(\d{4})(\d+)/', '$1-$2-$3', $number);
+                                }
+                            @endphp
+                            <p><a href="https://wa.me/{{ $setting->no_wa ?? '0' }}"
+                                    target="_blank">{{ isset($setting->no_wa) ? formatPhone($setting->no_wa) : '' }}</a>
+                            </p>
                         </div>
                     </div>
                 </div>
@@ -1129,7 +1086,7 @@
                         </div>
                         <div class="info-content">
                             <h4>Hours of Operation</h4>
-                            <p>Setiap Hari: 10.00 - 22.00 WIB</p>
+                            <p>{{ $setting->hour_of_operation ?? '' }}</p>
                         </div>
                     </div>
                 </div>
@@ -1139,10 +1096,8 @@
 
         <!-- Google Maps (Full Width) -->
         <div class="map-section" data-aos="fade-up" data-aos-delay="200">
-            <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3966.2714286795846!2d106.876345!3d-6.225246!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69f2f6c3c4d9af%3A0xb4ac41d9e2f4a1c0!2sJl.%20Taman%20Mini%20I%2C%20RT.3%2FRW.2%2C%20Pinang%20Ranti%2C%20Kec.%20Makasar%2C%20Kota%20Jakarta%20Timur%2C%20Daerah%20Khusus%20Ibukota%20Jakarta%2013560!5e0!3m2!1sid!2sid!4v1692950000000!5m2!1sid!2sid"
-                width="100%" height="500" style="border:0;" allowfullscreen="" loading="lazy"
-                referrerpolicy="no-referrer-when-downgrade">
+            <iframe src="{{ $setting->maps_link ?? '' }}" width="100%" height="500" style="border:0;"
+                allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
             </iframe>
             <div class="map-overlay">
                 <i class="bi bi-geo-alt-fill fs-2 text-warning"></i>

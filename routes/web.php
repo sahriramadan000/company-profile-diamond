@@ -1,8 +1,10 @@
 <?php
 
+use App\Http\Controllers\Admin\GoldPriceController;
+use App\Http\Controllers\Admin\ImportantNoteController;
+use App\Http\Controllers\Admin\SettingController;
+use App\Http\Controllers\LandingPageController;
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\DashboardController;
-use App\Http\Controllers\UserSelectionController;
 
 /*
 |--------------------------------------------------------------------------
@@ -18,6 +20,12 @@ use App\Http\Controllers\UserSelectionController;
 // ============================================================
 // Front Web
 // ============================================================
-Route::get('/', function () {
-    return view('front-view.landing-page.index');
-})->name('home');
+Route::get('/', [LandingPageController::class, 'index'])->name('home');
+
+Route::prefix('admin/v1')->group(function () {
+    Route::get('/access', [GoldPriceController::class, 'index'])->name('admin');
+    Route::post('/access/store', [GoldPriceController::class, 'store'])->name('admin.update_gold_prices');
+    Route::post('/access/important-note', [ImportantNoteController::class, 'store'])->name('admin.update_important_note');
+    Route::post('/access/setting', [SettingController::class, 'createOrUpdate'])
+        ->name('admin.update_setting');
+});

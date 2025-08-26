@@ -11,7 +11,7 @@
         <div
             class="header-container container-fluid container-xl position-relative d-flex align-items-center justify-content-between">
 
-            <a href="index.html" class="logo d-flex align-items-center me-auto me-xl-0">
+            <a href="{{ route('home') }}" class="logo d-flex align-items-center me-auto me-xl-0">
                 <!-- <img src="assets/img/logo.webp" alt=""> -->
                 <h1 class="sitename">DIAMOND</h1>
             </a>
@@ -27,7 +27,7 @@
                 <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
             </nav>
 
-            <a class="btn-getstarted" href="https://wa.me/628123456789" target="_blank">
+            <a class="btn-getstarted" href="https://wa.me/{{ $setting->no_wa ?? '0' }}" target="_blank">
                 Hubungi via WhatsApp
             </a>
         </div>
@@ -40,12 +40,13 @@
 
     <footer id="footer" class="footer pb-0">
         <div class="copyright text-center mt-2">
-            <p>© 2025 <span>Copyright</span> <strong class="px-1 sitename">Diamond</strong> <span>All Rights
+            <p>© 2025 <span>Copyright</span> <strong class="px-1 sitename" id="sitename">Diamond</strong> <span>All
+                    Rights
                     Reserved</span></p>
         </div>
     </footer>
 
-    <a href="https://wa.me/628123456789" target="_blank" id="whatsapp-float"
+    <a href="https://wa.me/{{ $setting->no_wa ?? '0' }}" target="_blank" id="whatsapp-float"
         class="d-flex align-items-center justify-content-center">
         <i class="bi bi-whatsapp"></i>
     </a>
