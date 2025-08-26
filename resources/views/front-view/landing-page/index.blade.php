@@ -126,12 +126,11 @@
             <div class="alert alert-info mt-3" role="alert">
                 <h6 class="fw-bold text-black">Keterangan Penting:</h6>
                 <ul class="mb-0">
-                    <li>Daftar harga di atas berlaku khusus untuk Logam Mulia Antam dengan kemasan Certicard tahun 2020
-                        hingga 2024 (Redmark).</li>
-                    <li>Apabila Anda ingin mengetahui update harga buyback untuk merek lain seperti UBS, Lotus Archi, Mini
-                        Gold, Emas Mini, atau EOA Gold, silakan hubungi tim kami melalui WhatsApp.</li>
-                    <li>Bagi yang membutuhkan informasi harga Antam edisi lama (kemasan Portrait/berdiri, Landscape/tidur,
-                        atau bentuk Bulat), dapat langsung menghubungi kami via WhatsApp.</li>
+                    @forelse ($importantNotes as $note)
+                        <li>{{ $note->note }}</li>
+                    @empty
+                        <li>Data tidak tersedia</li>
+                    @endforelse
                 </ul>
             </div>
 
