@@ -119,7 +119,7 @@
                                                 </thead>
                                             </thead>
                                             <tbody>
-                                                @foreach ($goldPrices as $price)
+                                                @forelse ($goldPrices as $price)
                                                     <tr>
                                                         <td>{{ $loop->iteration }}</td>
                                                         <td><input type="text" name="weight[]" class="form-control"
@@ -127,8 +127,7 @@
                                                         <td><input type="text" name="base_price[]"
                                                                 class="form-control price-format"
                                                                 value="{{ number_format($price->base_price, 0, '.', '.') }}"
-                                                                placeholder="Harga Dasar">
-                                                        </td>
+                                                                placeholder="Harga Dasar"></td>
                                                         <td><input type="text" name="price_pph[]"
                                                                 class="form-control price-format"
                                                                 value="{{ number_format($price->price_pph, 0, '.', '.') }}"
@@ -136,7 +135,21 @@
                                                         <td><button type="button"
                                                                 class="btn btn-danger btn-sm removeRow">Hapus</button></td>
                                                     </tr>
-                                                @endforeach
+                                                @empty
+                                                    <tr>
+                                                        <td>1</td>
+                                                        <td><input type="text" name="weight[]" class="form-control"
+                                                                value="" placeholder="Berat (gr)"></td>
+                                                        <td><input type="text" name="base_price[]"
+                                                                class="form-control price-format" value=""
+                                                                placeholder="Harga Dasar"></td>
+                                                        <td><input type="text" name="price_pph[]"
+                                                                class="form-control price-format" value=""
+                                                                placeholder="Harga +PPh 0.25%"></td>
+                                                        <td><button type="button"
+                                                                class="btn btn-danger btn-sm removeRow">Hapus</button></td>
+                                                    </tr>
+                                                @endforelse
                                             </tbody>
                                         </table>
 
