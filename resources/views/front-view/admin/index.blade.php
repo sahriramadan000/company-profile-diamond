@@ -123,14 +123,15 @@
                                                     <tr>
                                                         <td>{{ $loop->iteration }}</td>
                                                         <td><input type="text" name="weight[]" class="form-control"
-                                                                value="{{ $price->weight }}" placeholder="Berat (gr)"></td>
+                                                                value="{{ $price->weight ?? '' }}" placeholder="Berat (gr)">
+                                                        </td>
                                                         <td><input type="text" name="base_price[]"
                                                                 class="form-control price-format"
-                                                                value="{{ number_format($price->base_price, 0, '.', '.') }}"
+                                                                value="{{ isset($price->base_price) ? number_format((float) $price->base_price, 0, '.', '.') : '' }}"
                                                                 placeholder="Harga Dasar"></td>
                                                         <td><input type="text" name="price_pph[]"
                                                                 class="form-control price-format"
-                                                                value="{{ number_format($price->price_pph, 0, '.', '.') }}"
+                                                                value="{{ isset($price->price_pph) ? number_format((float) $price->price_pph, 0, '.', '.') : '' }}"
                                                                 placeholder="Harga +PPh 0.25%"></td>
                                                         <td><button type="button"
                                                                 class="btn btn-danger btn-sm removeRow">Hapus</button></td>
