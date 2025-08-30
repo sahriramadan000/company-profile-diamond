@@ -13,5 +13,6 @@ class Setting extends Model
         'address',
         'hour_of_operation',
         'maps_link',
+        'ads_image'
     ];
 }

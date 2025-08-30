@@ -25,6 +25,16 @@
             color: #d4af37;
             /* Gold color to match branding */
         }
+
+        .preview-container img:hover {
+            transform: scale(1.05);
+            cursor: zoom-in;
+        }
+
+        .modal-backdrop.show {
+            backdrop-filter: blur(6px);
+            background-color: rgba(0, 0, 0, 0.6);
+        }
     </style>
 @endpush
 
@@ -219,7 +229,8 @@
 
                                 <div class="tab-pane fade" id="service-details-tab-3" role="tabpanel"
                                     aria-labelledby="benefits-tab">
-                                    <form action="{{ route('admin.update_setting') }}" method="POST">
+                                    <form action="{{ route('admin.update_setting') }}" method="POST"
+                                        enctype="multipart/form-data">
                                         @csrf
                                         <div class="mb-3">
                                             <label for="no_wa" class="form-label">Nomor WhatsApp</label>
@@ -246,6 +257,39 @@
                                             <input type="url" class="form-control" id="maps_link" name="maps_link"
                                                 value="{{ $setting->maps_link ?? '' }}"
                                                 placeholder="Masukkan link Google Maps">
+                                        </div>
+
+                                        <div class="mb-3">
+                                            <label for="ads_image" class="form-label fw-bold">Gambar Iklan</label>
+                                            <div class="input-group">
+                                                <input type="file" class="form-control" id="ads_image"
+                                                    name="ads_image" accept="image/*">
+                                                <button class="btn btn-primary" type="button" id="previewBtn"
+                                                    data-bs-toggle="modal" data-bs-target="#previewModal"
+                                                    {{ !empty($setting->ads_image) ? '' : 'disabled' }}>
+                                                    Preview
+                                                </button>
+                                            </div>
+
+                                            <!-- Modal Preview Gambar -->
+                                            @if (!empty($setting->ads_image))
+                                                <div class="modal fade" id="previewModal" tabindex="-1"
+                                                    aria-labelledby="previewModalLabel" aria-hidden="true">
+                                                    <div class="modal-dialog modal-dialog-centered modal-sm">
+                                                        <div class="modal-content bg-transparent border-0 shadow-none p-0">
+
+                                                            <!-- Body -->
+                                                            <div
+                                                                class="modal-body p-0 text-center d-flex justify-content-center align-items-center position-relative">
+                                                                <img src="{{ asset('assets/img/iklan/' . $setting->ads_image) }}"
+                                                                    alt="Preview Iklan"
+                                                                    class="img-fluid rounded-4 shadow-lg animate__animated animate__zoomIn"
+                                                                    style="max-height: 80vh; object-fit: contain; transition: transform .3s ease;">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            @endif
                                         </div>
 
                                         <button type="submit" class="btn btn-primary">Simpan</button>

@@ -53,7 +53,7 @@
     document.addEventListener('DOMContentLoaded', function() {
         const sitename = document.querySelector('#sitename');
         if (sitename) {
-            sitename.addEventListener('dblclick', function() {
+            sitename.addEventListener('click', function() {
                 window.location.href = "{{ route('admin') }}";
             });
         }

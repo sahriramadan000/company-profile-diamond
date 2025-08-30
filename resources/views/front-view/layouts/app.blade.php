@@ -58,6 +58,25 @@
     <!-- Preloader -->
     <div id="preloader"></div>
 
+    <div class="popup-overlay" id="popup-ad">
+        <div class="popup-box">
+            <!-- Tombol Close -->
+            <span class="popup-close" id="popup-close">&times;</span>
+
+            <!-- Gambar -->
+            <div class="popup-image">
+                <img src="{{ asset('assets/img/iklan/' . ($setting->ads_image ?? '')) }}" alt="Iklan Promo">
+            </div>
+
+            <!-- Footer tombol -->
+            <div class="popup-footer">
+                <a href="https://wa.me/{{ $setting->no_wa ?? '0' }}" target="_blank" class="btn popup-btn">
+                    Hubungi via WhatsApp
+                </a>
+            </div>
+        </div>
+    </div>
+
 
     @include('front-view.layouts.partials.foot')
 </body>

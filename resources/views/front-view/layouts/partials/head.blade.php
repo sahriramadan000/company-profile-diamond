@@ -7,8 +7,8 @@
     content="toko emas, jual emas, beli emas, harga emas, perhiasan emas, investasi emas, emas murni, DIAMOND">
 
 <!-- Favicons -->
-<link href="{{ asset('assets/img/favicon.png') }}" rel="icon">
-<link href="{{ asset('assets/img/apple-touch-icon.png') }}" rel="apple-touch-icon">
+<link href="{{ asset('hero-img.png') }}" rel="icon">
+<link href="{{ asset('hero-img.png') }}" rel="apple-touch-icon">
 
 <!-- Fonts -->
 <link href="https://fonts.googleapis.com" rel="preconnect">
@@ -48,5 +48,97 @@
     #whatsapp-float:hover {
         background: #1ebe5d;
         color: #fff;
+    }
+
+    /* Overlay gelap */
+    .popup-overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.6);
+        display: none;
+        align-items: center;
+        justify-content: center;
+        z-index: 9999;
+    }
+
+    /* Kotak iklan */
+    .popup-box {
+        background: #fff;
+        padding: 0;
+        max-width: 600px;
+        width: 95%;
+        border-radius: 15px;
+        overflow: hidden;
+        position: relative;
+        text-align: center;
+        box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
+        animation: fadeIn 0.5s ease-in-out;
+    }
+
+    /* Gambar */
+    .popup-image img {
+        width: 100%;
+        height: auto;
+        display: block;
+    }
+
+    /* Footer mirip card */
+    .popup-footer {
+        background: #f8f9fa;
+        padding: 0;
+        text-align: center;
+        border-top: 1px solid #e0e0e0;
+    }
+
+    /* Tombol di footer */
+    .popup-btn {
+        width: 100%;
+        display: inline-block;
+        padding: 12px 20px;
+        border-radius: 0 0 8px 8px;
+        font-size: 1rem;
+        font-weight: bold;
+        background: #198754;
+        color: #fff;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+        transition: all 0.3s ease;
+    }
+
+    .popup-btn:hover {
+        background: #146b42;
+        color: #fff;
+    }
+
+    /* Tombol close */
+    .popup-close {
+        position: absolute;
+        top: 10px;
+        right: 15px;
+        font-size: 28px;
+        cursor: pointer;
+        color: #fff;
+        background: rgba(0, 0, 0, 0.5);
+        width: 35px;
+        height: 35px;
+        border-radius: 50%;
+        line-height: 35px;
+        text-align: center;
+        font-weight: bold;
+        z-index: 100;
+    }
+
+    @keyframes fadeIn {
+        from {
+            opacity: 0;
+            transform: scale(0.9);
+        }
+
+        to {
+            opacity: 1;
+            transform: scale(1);
+        }
     }
 </style>

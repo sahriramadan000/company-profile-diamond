@@ -539,7 +539,7 @@
     </section><!-- /Call To Action Section -->
 
     <!-- Testimonials Section -->
-    <section id="testimonials" class="testimonials section light-background">
+    {{-- <section id="testimonials" class="testimonials section light-background">
 
         <!-- Section Title -->
         <div class="container section-title" data-aos="fade-up">
@@ -698,7 +698,7 @@
 
         </div>
 
-    </section><!-- /Testimonials Section -->
+    </section><!-- /Testimonials Section --> --}}
 
 
     <!-- Portfolio Section -->
@@ -1127,5 +1127,25 @@
         }
 
         setGoldUpdateTime();
+    </script>
+    <script>
+        // Tampilkan popup setelah halaman load
+        window.addEventListener('load', function() {
+            const popup = document.getElementById('popup-ad');
+            const closeBtn = document.getElementById('popup-close');
+
+            popup.style.display = 'flex';
+
+            closeBtn.addEventListener('click', function() {
+                popup.style.display = 'none';
+            });
+
+            // Klik di luar popup menutup iklan
+            popup.addEventListener('click', function(e) {
+                if (e.target === popup) {
+                    popup.style.display = 'none';
+                }
+            });
+        });
     </script>
 @endpush
