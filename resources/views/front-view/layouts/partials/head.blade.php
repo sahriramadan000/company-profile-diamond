@@ -1,10 +1,10 @@
 <meta charset="utf-8">
 <meta content="width=device-width, initial-scale=1.0" name="viewport">
-<title>DIAMOND</title>
+<title>DIAMOND GOLD</title>
 <meta name="description"
-    content="Toko DIAMOND melayani jual beli emas dengan harga terpercaya, aman, dan transparan. Temukan perhiasan emas berkualitas serta layanan investasi emas yang menguntungkan di toko kami.">
+    content="Toko DIAMOND GOLD melayani jual beli emas dengan harga terpercaya, aman, dan transparan. Temukan perhiasan emas berkualitas serta layanan investasi emas yang menguntungkan di toko kami.">
 <meta name="keywords"
-    content="toko emas, jual emas, beli emas, harga emas, perhiasan emas, investasi emas, emas murni, DIAMOND">
+    content="toko emas, jual emas, beli emas, harga emas, perhiasan emas, investasi emas, emas murni, DIAMOND GOLD, toko emas terpercaya, layanan jual beli emas">
 
 <!-- Favicons -->
 <link href="{{ asset('hero-img.png') }}" rel="icon">

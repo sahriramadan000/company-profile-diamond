@@ -13,7 +13,7 @@
 
             <a href="{{ route('home') }}" class="logo d-flex align-items-center me-auto me-xl-0">
                 <!-- <img src="assets/img/logo.webp" alt=""> -->
-                <h1 class="sitename">DIAMOND</h1>
+                <h1 class="sitename">DIAMOND GOLD</h1>
             </a>
 
             <nav id="navmenu" class="navmenu">
@@ -27,7 +27,8 @@
                 <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
             </nav>
 
-            <a class="btn-getstarted" href="https://wa.me/{{ $setting->no_wa ?? '0' }}" target="_blank">
+            <a class="btn-getstarted d-none d-md-inline-block" href="https://wa.me/{{ $setting->no_wa ?? '0' }}"
+                target="_blank">
                 Hubungi via WhatsApp
             </a>
         </div>
@@ -40,9 +41,9 @@
 
     <footer id="footer" class="footer pb-0">
         <div class="copyright text-center mt-2">
-            <p>© 2025 <span>Copyright</span> <strong class="px-1 sitename" id="sitename">Diamond</strong> <span>All
-                    Rights
-                    Reserved</span></p>
+            <p>© 2025 <span>Copyright</span> <strong class="px-1 sitename" id="sitename">Diamond Gold</strong>
+                <span>All Rights Reserved</span>
+            </p>
         </div>
     </footer>
 
