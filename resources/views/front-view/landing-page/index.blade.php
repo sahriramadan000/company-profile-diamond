@@ -42,7 +42,7 @@
                         <div class="divider"></div>
 
                         <div class="description">
-                            <p>Temukan keindahan dan nilai investasi emas bersama DIAMOND. Kami menghadirkan koleksi
+                            <p>Temukan keindahan dan nilai investasi emas bersama DIAMOND GOLD. Kami menghadirkan koleksi
                                 perhiasan emas berkualitas tinggi serta layanan jual beli emas yang aman dan transparan.
                                 Dengan pengalaman dan kepercayaan pelanggan, kami memastikan setiap transaksi menjadi
                                 pilihan cerdas untuk masa depan.</p>
@@ -357,11 +357,12 @@
                     <div class="col-lg-4 col-md-12">
                         <div class="service-summary">
                             <p>
-                                DIAMOND menghadirkan solusi terbaik dalam jual beli emas, perhiasan, serta investasi emas
+                                DIAMOND GOLD menghadirkan solusi terbaik dalam jual beli emas, perhiasan, serta investasi
+                                emas
                                 murni. Dengan harga transparan, kualitas terjamin, dan pelayanan profesional, kami menjadi
                                 mitra terpercaya untuk menjaga sekaligus menumbuhkan nilai aset Anda.
                             </p>
-                            <a href="https://wa.me/{{ $setting->no_wa ?? '0' }}?text=Halo%2C%20saya%20ingin%20tahu%20lebih%20lanjut%20tentang%20layanan%20DIAMOND"
+                            <a href="https://wa.me/{{ $setting->no_wa ?? '0' }}?text=Halo%2C%20saya%20ingin%20tahu%20lebih%20lanjut%20tentang%20layanan%20DIAMOND%20GOLD"
                                 class="service-btn" target="_blank">
                                 Hubungi via WhatsApp
                                 <i class="bi bi-whatsapp"></i>
@@ -431,7 +432,7 @@
                             </a>
                         </h3>
                         <p>
-                            Seluruh produk emas DIAMOND terjamin keaslian dan kemurniannya.
+                            Seluruh produk emas DIAMOND GOLD terjamin keaslian dan kemurniannya.
                             Setiap pembelian dilengkapi dengan sertifikat resmi.
                         </p>
                     </div>
@@ -483,9 +484,9 @@
 
                 <div class="content-left flex-grow-1" data-aos="fade-right" data-aos-delay="200">
                     <span class="badge text-uppercase mb-2">Jangan Lewatkan!</span>
-                    <h2>Wujudkan Investasi & Gaya Elegan Bersama DIAMOND</h2>
+                    <h2>Wujudkan Investasi & Gaya Elegan Bersama DIAMOND GOLD</h2>
                     <p class="my-4">
-                        DIAMOND hadir dengan koleksi emas dan perhiasan eksklusif yang tidak hanya indah,
+                        DIAMOND GOLD hadir dengan koleksi emas dan perhiasan eksklusif yang tidak hanya indah,
                         tetapi juga bernilai investasi jangka panjang. Ribuan pelanggan telah mempercayakan
                         aset berharga mereka bersama kami.
                     </p>
@@ -506,7 +507,7 @@
                     </div>
 
                     <div class="cta-buttons d-flex flex-wrap gap-3">
-                        <a href="https://wa.me/{{ $setting->no_wa ?? '0' }}?text=Halo%2C%20saya%20ingin%20tahu%20lebih%20lanjut%20tentang%20emas%20DIAMOND"
+                        <a href="https://wa.me/{{ $setting->no_wa ?? '0' }}?text=Halo%2C%20saya%20ingin%20tahu%20lebih%20lanjut%20tentang%20emas%20DIAMOND%20GOLD"
                             class="btn btn-primary" target="_blank">
                             Hubungi via WhatsApp
                         </a>
@@ -952,7 +953,7 @@
                 <div class="col-lg-5" data-aos="fade-up">
                     <h2 class="faq-title">Punya pertanyaan? Cek FAQ kami</h2>
                     <p class="faq-description">Temukan jawaban atas pertanyaan umum seputar jual beli emas, perhiasan,
-                        serta layanan investasi di Toko Emas DIAMOND.</p>
+                        serta layanan investasi di Toko Emas DIAMOND GOLD.</p>
                     <div class="faq-arrow d-none d-lg-block" data-aos="fade-up" data-aos-delay="200">
                         <svg class="faq-arrow" width="200" height="211" viewBox="0 0 200 211" fill="none"
                             xmlns="http://www.w3.org/2000/svg">
@@ -967,7 +968,7 @@
                     <div class="faq-container">
 
                         <div class="faq-item faq-active">
-                            <h3>Apakah emas yang dijual di DIAMOND asli dan bersertifikat?</h3>
+                            <h3>Apakah emas yang dijual di DIAMOND GOLD asli dan bersertifikat?</h3>
                             <div class="faq-content">
                                 <p>Ya, semua emas dan perhiasan yang kami jual adalah asli, berkualitas tinggi,
                                     dan disertai sertifikat resmi untuk menjamin keaslian serta kadar emas.</p>
@@ -976,7 +977,7 @@
                         </div><!-- End Faq item-->
 
                         <div class="faq-item">
-                            <h3>Apakah bisa menjual kembali emas yang sudah dibeli di DIAMOND?</h3>
+                            <h3>Apakah bisa menjual kembali emas yang sudah dibeli di DIAMOND GOLD?</h3>
                             <div class="faq-content">
                                 <p>Tentu, kami melayani buyback (jual kembali) emas dengan harga kompetitif sesuai harga
                                     pasar saat itu.
@@ -986,7 +987,7 @@
                         </div><!-- End Faq item-->
 
                         <div class="faq-item">
-                            <h3>Apakah DIAMOND menyediakan emas batangan untuk investasi?</h3>
+                            <h3>Apakah DIAMOND GOLD menyediakan emas batangan untuk investasi?</h3>
                             <div class="faq-content">
                                 <p>Ya, kami menyediakan emas batangan dalam berbagai ukuran mulai dari 1 gram hingga 100
                                     gram,
@@ -996,7 +997,7 @@
                         </div><!-- End Faq item-->
 
                         <div class="faq-item">
-                            <h3>Bagaimana cara mengetahui harga emas terbaru di DIAMOND?</h3>
+                            <h3>Bagaimana cara mengetahui harga emas terbaru di DIAMOND GOLD?</h3>
                             <div class="faq-content">
                                 <p>Harga emas kami selalu mengikuti perkembangan pasar dan diperbarui setiap hari.
                                     Anda dapat mengeceknya langsung di toko kami atau menghubungi WhatsApp customer service.
@@ -1006,7 +1007,7 @@
                         </div><!-- End Faq item-->
 
                         <div class="faq-item">
-                            <h3>Apakah DIAMOND menerima pembuatan perhiasan custom?</h3>
+                            <h3>Apakah DIAMOND GOLD menerima pembuatan perhiasan custom?</h3>
                             <div class="faq-content">
                                 <p>Ya, kami melayani pembuatan perhiasan custom dengan desain sesuai permintaan Anda.
                                     Tim desainer kami siap membantu mewujudkan perhiasan impian Anda.</p>
@@ -1100,7 +1101,7 @@
             </iframe>
             <div class="map-overlay">
                 <i class="bi bi-geo-alt-fill fs-2 text-warning"></i>
-                <span>Toko Emas DIAMOND</span>
+                <span>Toko Emas DIAMOND GOLD</span>
             </div>
         </div>
     </section>
